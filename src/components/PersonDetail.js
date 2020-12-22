@@ -1,4 +1,4 @@
-export default ({ person, films }) => (
+const PersonDetail = ({ person, films }) => (
   <table>
     <tbody>
       <tr>
@@ -25,4 +25,6 @@ export default ({ person, films }) => (
       </tr>
     </tbody>
   </table>
-)
+);
+
+export default PersonDetail;

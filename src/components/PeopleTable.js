@@ -1,6 +1,6 @@
 import PeopleTableRow from "./PeopleTableRow";
 
-export default ({ people, onPersonClick }) => (
+const PeopleTable = ({ people, onPersonClick }) => (
   <table>
     <thead>
       <tr>
@@ -14,4 +14,6 @@ export default ({ people, onPersonClick }) => (
         people.map((person, idx) => <PeopleTableRow key={`person${idx}`} person={person} onClick={() => onPersonClick(person)} />)}
     </tbody>
   </table>
-)
+);
+
+export default PeopleTable;
