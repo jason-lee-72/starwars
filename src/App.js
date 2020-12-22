@@ -47,15 +47,13 @@ function App({ people, films, getPeople, setSelectedPerson, getFilms }) {
     <div className="app">
       {!people.data && people.loading ? 'Loading ...' :
         people.error ? 'An error occurred loading people' :
-          people.data && <PeopleTable people={people.data.results}
+          people.data && <PeopleTable peopleData={people.data}
             selectedPerson={people.selectedPerson}
             loading={people.loading}
             onPersonClick={handlePersonClick}
+            onPreviousClick={handleGetPreviousClick}
+            onNextClick={handleGetNextClick}
           />}
-      <div className={'buttons' + (people.loading ? ' loading' : '')}>
-        {people.data && people.data.previous && <button onClick={handleGetPreviousClick}>Previous</button>}
-        {people.data && people.data.next && <button onClick={handleGetNextClick}>Next</button>}
-      </div>
       {people.selectedPerson && !films.loading && <PersonDetail person={people.selectedPerson} films={films} />}
     </div>
   );
