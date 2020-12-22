@@ -15,7 +15,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_PEOPLE:
-      return { ...state, ...{ data: null, error: null, loading: true } };
+      return { ...state, ...{ error: null, loading: true } };
     case GET_PEOPLE_SUCCESS:
       return {
         ...state,

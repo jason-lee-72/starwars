@@ -2,8 +2,17 @@ table {
   width: 100%;
 }
 
-table.person-detail th {
+.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+table.person th {
   width: 20%;
+}
+
+tr.selected {
+  font-weight: bolder;
 }
 
 th, td {

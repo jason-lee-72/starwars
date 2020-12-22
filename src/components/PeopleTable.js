@@ -1,7 +1,7 @@
 import PeopleTableRow from "./PeopleTableRow";
 
-const PeopleTable = ({ people, onPersonClick }) => (
-  <table>
+const PeopleTable = ({ people, selectedPerson, loading, onPersonClick }) => (
+  <table className={'people' + (loading ? ' loading' : '')}>
     <thead>
       <tr>
         <th>Name</th>
@@ -11,7 +11,7 @@ const PeopleTable = ({ people, onPersonClick }) => (
     </thead>
     <tbody>
       {people &&
-        people.map((person, idx) => <PeopleTableRow key={`person${idx}`} person={person} onClick={() => onPersonClick(person)} />)}
+        people.map((person, idx) => <PeopleTableRow key={`person${idx}`} person={person} onClick={() => onPersonClick(person)} selected={person === selectedPerson}/>)}
     </tbody>
   </table>
 );

@@ -1,5 +1,5 @@
 const PersonDetail = ({ person, films }) => (
-  <table className="person-detail">
+  <table className="person">
     <tbody>
       <tr>
         <th>Name:</th>
