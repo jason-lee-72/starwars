@@ -1,9 +1,13 @@
 const PersonDetail = ({ person, films }) => (
-  <table>
+  <table className="person-detail">
     <tbody>
       <tr>
         <th>Name:</th>
         <td>{person.name}</td>
+      </tr>
+      <tr>
+        <th>Height (cm):</th>
+        <td>{person.height}</td>
       </tr>
       <tr>
         <th>Birth year:</th>

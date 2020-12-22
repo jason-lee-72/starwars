@@ -44,13 +44,15 @@ function App({ people, films, getPeople, setSelectedPerson, getFilms }) {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       {people.loading ? 'Loading ...' :
         people.error ? 'An error occurred loading people' :
           people.data && <PeopleTable people={people.data.results} onPersonClick={handlePersonClick} />}
 
-      {people.data && people.data.previous && <button onClick={handleGetPreviousClick}>Previous</button>}
-      {people.data && people.data.next && <button onClick={handleGetNextClick}>Next</button>}
+      <div className="buttons">
+        {people.data && people.data.previous && <button onClick={handleGetPreviousClick}>Previous</button>}
+        {people.data && people.data.next && <button onClick={handleGetNextClick}>Next</button>}
+      </div>
 
       {people.selectedPerson && <PersonDetail person={people.selectedPerson} films={films} />}
     </div>

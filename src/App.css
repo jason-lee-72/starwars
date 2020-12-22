@@ -1,8 +1,27 @@
+table {
+  width: 100%;
+}
+
+table.person-detail th {
+  width: 20%;
+}
+
 th, td {
+  padding: 8px;
   text-align: left;
+  border-bottom: 1px solid lightgray;
 }
 
 th {
   vertical-align: top;
   white-space: nowrap;
+}
+
+.buttons {
+  padding: 8px;
+  text-align: right;
+}
+
+button {
+  margin-right: 8px;
 }

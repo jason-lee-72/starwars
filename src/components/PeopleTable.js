@@ -5,8 +5,8 @@ const PeopleTable = ({ people, onPersonClick }) => (
     <thead>
       <tr>
         <th>Name</th>
-        <th>Height(cm)</th>
-        <th>Mass(kg)</th>
+        <th>Height (cm)</th>
+        <th>Mass (kg)</th>
       </tr>
     </thead>
     <tbody>
