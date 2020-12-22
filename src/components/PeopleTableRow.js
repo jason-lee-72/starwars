@@ -1,5 +1,3 @@
-import PeopleTable from "./PeopleTable"
-
 const PeopleTableRow = ({ person, onClick}) => (
     <tr onClick={onClick}>
         <td>{person.name}</td>
