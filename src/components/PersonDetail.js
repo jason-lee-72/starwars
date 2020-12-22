@@ -20,11 +20,9 @@ const PersonDetail = ({ person, films }) => (
       <tr>
         <th>List of films:</th>
         <td>
-          {
-            films.loading ? 'Loading ... ' :
-              films.error ? 'An error occurred loading films' :
-                films.data && films.data.map((film, index) => film.title + (index < films.data.length - 1 ? ', ' : ''))
-          }
+          {films.loading ? 'Loading ... ' :
+            films.error ? 'An error occurred loading films' :
+              films.data && films.data.map((film, index) => film.title + (index < films.data.length - 1 ? ', ' : ''))}
         </td>
       </tr>
     </tbody>
