@@ -11,9 +11,9 @@ function getPeople(url = SWAPI_PEOPLE_ENDPOINT) {
     try {
       const result = await fetch(url);
       const data = await result.json();
-      dispatch(dispatch({ type: GET_PEOPLE_SUCCESS, data }));
+      dispatch({ type: GET_PEOPLE_SUCCESS, data });
     } catch (error) {
-      dispatch(dispatch({ type: GET_PEOPLE_ERROR, error }));
+      dispatch({ type: GET_PEOPLE_ERROR, error });
     }
   };
 }

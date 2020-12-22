@@ -9,9 +9,9 @@ function getFilms(urls) {
       const results = await Promise.all(urls.map(url => fetch(url)));
       const data = await Promise.all(results.map(result => result.json()));
 
-      dispatch(dispatch({ type: GET_FILMS_SUCCESS, data }));
+      dispatch({ type: GET_FILMS_SUCCESS, data });
     } catch (error) {
-      dispatch(dispatch({ type: GET_FILMS_ERROR, error }));
+      dispatch({ type: GET_FILMS_ERROR, error });
     }
   };
 }
