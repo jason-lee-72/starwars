@@ -56,7 +56,7 @@ function App({ people, films, getPeople, setSelectedPerson, getFilms }) {
         {people.data && people.data.previous && <button onClick={handleGetPreviousClick}>Previous</button>}
         {people.data && people.data.next && <button onClick={handleGetNextClick}>Next</button>}
       </div>
-      {people.selectedPerson && <PersonDetail person={people.selectedPerson} films={films} />}
+      {people.selectedPerson && !films.loading && <PersonDetail person={people.selectedPerson} films={films} />}
     </div>
   );
 }
